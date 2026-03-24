@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Heading -->
+        <h1 class="main-heading">Employee Details</h1>
+
+        <!-- Add New Employee Form -->
+        <div class="form-section">
+            <h2>Add New Employee</h2>
+            <form id="employeeForm">
+                <input type="hidden" id="employeeId">
+                
+                <div class="form-group">
+                    <label for="empID">Employee ID *</label>
+                    <input type="text" id="empID" placeholder="Enter employee ID (e.g., EMP001)" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="empName">Employee Name *</label>
+                    <input type="text" id="empName" placeholder="Enter employee name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" placeholder="Enter age" min="18" max="65" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="designation">Designation *</label>
+                    <input type="text" id="designation" placeholder="Enter designation (e.g., Software Engineer)" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="salary">Salary (₹) *</label>
+                    <input type="number" id="salary" placeholder="Enter salary in rupees" min="0" step="0.01" required>
+                </div>
+                
+                <button type="submit" id="submitBtn" class="add-btn">+ Add Employee</button>
+                <button type="button" id="cancelBtn" class="cancel-btn" style="display: none;">Cancel</button>
+            </form>
+        </div>
+
+        <!-- Employees Table -->
+        <div class="employees-section">
+            <div class="employees-table">
+                <div class="table-header">
+                    <div class="header-cell">#</div>
+                    <div class="header-cell">Emp ID</div>
+                    <div class="header-cell">Emp Name</div>
+                    <div class="header-cell">Age</div>
+                    <div class="header-cell">Designation</div>
+                    <div class="header-cell">Salary</div>
+                    <div class="header-cell">Actions</div>
+                </div>
+                <div id="employeesList" class="table-body">
+                    <!-- Employees will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
